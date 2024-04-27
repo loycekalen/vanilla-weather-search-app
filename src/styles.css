@@ -60,15 +60,15 @@ p {
   top: 25px;
 }
 .weather-value {
-  font-size: 60px;
+  font-size: 80px;
   position: relative;
   top: 20px;
-  font-size: 900;
+  font-weight: bold;
 }
 .weather-unit {
   font-size: 28px;
   position: relative;
-  top: -4px;
+  top: -14px;
 }
 footer {
   border-top: 1px solid grey;
