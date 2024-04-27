@@ -1,6 +1,6 @@
 body {
   font-family: "Rubik", sans-serif;
-  background: #f9f7fe;
+  background: #868789;
 }
 main {
   margin-top: 10px;
@@ -54,21 +54,19 @@ p {
   justify-content: space-between;
 }
 .weather-icon {
-  font-size: 40px;
-  margin-right: 10px;
   position: relative;
-  top: 25px;
+  top: 15px;
 }
 .weather-value {
   font-size: 80px;
   position: relative;
-  top: 20px;
+  top: -15px;
   font-weight: bold;
 }
 .weather-unit {
   font-size: 28px;
   position: relative;
-  top: -14px;
+  top: -52px;
 }
 footer {
   border-top: 1px solid grey;
