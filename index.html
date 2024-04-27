@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Patrick+Hand&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Search App</title>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <form>
-      <input type="text" placeholder="Enter a city.." />
-      <input type="submit" value="Search" />
-    </form>
-    <h1>London</h1>
-    <p>
-      Saturday 15:37, scattered clouds
-      <br />
-      Humidity:62%, Wind:8.23km/h
-    </p>
-    <p>☁31°C</p>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/loycekalen" target="_blank">Loyce Kalen,</a>
-      is
-      <a
-        href="https://github.com/loycekalen/vanilla-weather-search-app"
-        target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and
-      <a
-        href="https://vanilla-weather-search-app-por-kalen.netlify.app"
-        target="_blank"
-        >hosted on Netlify</a
-      >
-    </footer>
+    <div class="weather-app">
+      <header>
+        <form class="weather-search">
+          <input
+            type="text"
+            placeholder="Enter a city.."
+            required
+            class="weather-search-input"
+          />
+          <input type="submit" value="Search" class="weather-search-bar" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-section">
+          <div>
+            <h1>London</h1>
+            <p>
+              Saturday 15:37, scattered clouds
+              <br />
+              Humidity:<strong>62%</strong>, Wind:<strong>8.23km/h</strong>
+            </p>
+          </div>
+          <div class="current-weather">
+            <span class="weather-icon">☁</span>
+            <span class="weather-value">31</span>
+            <span class="weather-unit">°C</span>
+          </div>
+        </div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/loycekalen" target="_blank">Loyce Kalen,</a>
+        is
+        <a
+          href="https://github.com/loycekalen/vanilla-weather-search-app"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a
+          href="https://vanilla-weather-search-app-por-kalen.netlify.app"
+          target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
