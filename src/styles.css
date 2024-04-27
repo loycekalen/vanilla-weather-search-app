@@ -17,6 +17,9 @@ strong {
 a {
   color: black;
 }
+a:hover {
+  color: #f87882;
+}
 p {
   opacity: 0.9;
 }
@@ -38,7 +41,7 @@ p {
   font-size: 15px;
 }
 .weather-search-bar {
-  padding: 12px 30px 12px 20px;
+  padding: 12px 30px;
   border: none;
   border-radius: 5px;
   font-size: 15px;
