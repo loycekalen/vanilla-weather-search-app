@@ -15,6 +15,8 @@ function updateWeatherInfo(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -54,12 +56,13 @@ function weatherDisplay(event) {
   citySearch(searchInput.value);
 }
 
-let searchForm = document.querySelector("#weather-search");
-searchForm.addEventListener("submit", weatherDisplay);
+function getForecast(city) {
+  apikey = "1485fbda2c63be71004148t8363fo230";
+  apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
-citySearch("Banff");
-
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#weather-forecast");
 
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
@@ -81,4 +84,8 @@ function displayForecast() {
   forecastElement.innerHTML = forecast;
 }
 
+let searchForm = document.querySelector("#weather-search");
+searchForm.addEventListener("submit", weatherDisplay);
+
+citySearch("Banff");
 displayForecast();
