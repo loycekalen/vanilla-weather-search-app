@@ -58,3 +58,27 @@ let searchForm = document.querySelector("#weather-search");
 searchForm.addEventListener("submit", weatherDisplay);
 
 citySearch("Banff");
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecast = "";
+  days.forEach(function (day) {
+    forecast =
+      forecast +
+      `<div class="weather-forecast-day">
+      <div class="forecast-date">${day}</div>
+          <div class="forecast-icon">☀</div>
+          <div class="forecast-temperatures">
+            <div class="forecast-max-temperature">
+              <strong>18&deg;</strong> /
+              <span class="forecast-min-temperature">11&deg;</span>
+            </div>
+          </div>
+          </div>`;
+  });
+  forecastElement.innerHTML = forecast;
+}
+
+displayForecast();
