@@ -26,7 +26,7 @@ p {
 .weather-app {
   background-color: #434a7f;
   border: 1px solid grey;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 20px;
   max-width: 600px;
   color: #fff;
@@ -76,5 +76,18 @@ footer {
 }
 .weather-forecast {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.forecast-icon {
+  width: 82px;
+}
+.forecast-min-temperature {
+  color: black;
+  opacity: 0.6;
+}
+.forecast-temperatures {
+  font-size: 16px;
 }
